@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@300;400;700&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Fira Code', monospace;
+  color: #363643;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+header {
+  background: #F8F7FF;
+  padding: 20px 0;
+}
+
+header nav ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header a {
+  text-decoration: none;
+  display: block;
+  margin: 20px auto;
+  position: relative;
+  overflow: hidden;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  -webkit-transition: color 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+  transition: color 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+  letter-spacing: .15rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 739px) {
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header h1 {
+    font-size: 24px;
+  }
+  .header a {
+    padding: 0 5px;
+    font-size: 14px;
+  }
+}
+
+.link-animation {
+  color: #363643;
+  position: relative;
+  z-index: 1;
+  padding: 2px 6px;
+}
+
+.link-animation::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: block;
+  background-color: #827AFF;
+  content: "";
+  -webkit-transform: translate3d(-101%, 0, 0);
+          transform: translate3d(-101%, 0, 0);
+  z-index: -1;
+  -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+  transition: -webkit-transform 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+  transition: transform 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+  transition: transform 0.3s cubic-bezier(0.11, 0.7, 0, 1), -webkit-transform 0.3s cubic-bezier(0.11, 0.7, 0, 1);
+}
+
+.link-animation:hover {
+  color: #F8F7FF;
+  font-weight: bold;
+}
+
+.link-animation:hover::after {
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+}
+
+.section-main {
+  background: #827AFF;
+  padding: 60px 0;
+}
+
+.section-main h1 {
+  color: #F8F7FF;
+  font-size: 32px;
+  text-align: center;
+}
+
+.section-main img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  margin: 40px auto;
+  display: block;
+  border: 5px solid #F8F7FF;
+}
+
+@media (max-width: 739px) {
+  .section-main img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.text-animation {
+  color: #F8F7FF;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 480px;
+}
+
+.text-animation::after {
+  content: '|';
+  margin-left: 5px;
+  opacity: 1;
+  -webkit-animation: pisca .7s infinite;
+          animation: pisca .7s infinite;
+}
+
+@-webkit-keyframes pisca {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes pisca {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.search-me {
+  background: #9891FF;
+  color: #F8F7FF;
+  padding: 100px 0;
+}
+
+.search-me h1 {
+  font-size: 32px;
+  text-align: center;
+}
+
+.search-me p {
+  font-weight: 300;
+  max-width: 480px;
+  font-size: 16px;
+  margin: 40px auto 20px auto;
+}
+
+.search-me img {
+  display: block;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.search-me img:hover {
+  -webkit-transform: scale(1.2, 1.2);
+          transform: scale(1.2, 1.2);
+}
+
+.my-projects {
+  padding: 100px 0;
+  background: #F8F7FF;
+  color: #363643;
+}
+
+.my-projects h1 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.projects {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.project-item p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.project-item {
+  width: 40%;
+}
+
+.project-item img {
+  width: 100%;
+}
+
+footer {
+  padding: 40px 0;
+  background: #363643;
+}
+
+footer p {
+  text-align: center;
+  color: #F8F7FF;
+}
+/*# sourceMappingURL=main.css.map */
